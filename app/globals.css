@@ -1,7 +1,0 @@
-@import './legacy.css';
-
-html { scroll-behavior: smooth; }
-body { margin: 0; }
-.navlinks a { text-decoration: none; }
-.navlinks .navcta { color: #fff; }
-@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }
