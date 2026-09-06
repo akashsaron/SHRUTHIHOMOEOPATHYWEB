@@ -1,0 +1,6 @@
+'use client';
+import Link from 'next/link';
+import { useState } from 'react';
+
+const links=[['Home','/'],['About','/about'],['Services','/services'],['Conditions','/conditions'],['Doctor','/doctor'],['Approach','/approach'],['Contact','/contact']];
+export default function Header(){const [open,setOpen]=useState(false);return <><div className="topbar"><div className="container"><span>Faith Leads • We Care • God Heals</span><div className="toplinks"><a href="tel:+919632117374">+91 96321 17374</a><a href="mailto:shruthihomeopharmacy2011@gmail.com">shruthihomeopharmacy2011@gmail.com</a></div></div></div><header className="header"><div className="container nav"><Link className="brand" href="/"><img src="/image/SHRUTHI_logo-removebg-preview.png" alt="Shruthi Homoeopathy logo"/><span><strong>SHRUTHI HOMOEOPATHY</strong><small>K.G.F • NATURAL CARE</small></span></Link><button className="menu" aria-label="Open navigation" aria-expanded={open} onClick={()=>setOpen(!open)}>☰</button><nav className={`navlinks ${open?'open':''}`}>{links.map(([label,href])=><Link key={href} href={href} onClick={()=>setOpen(false)}>{label}</Link>)}<Link className="navcta" href="/appointment" onClick={()=>setOpen(false)}>Book Appointment</Link></nav></div></header></>}
